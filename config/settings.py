@@ -11,7 +11,7 @@ import os
 from pathlib import Path
 from django.utils.timezone import timedelta
 
-from configurations import Configuration, values
+#from configurations import Configuration, values
 # import firebase_admin
 # from firebase_admin import credentials
 import json
@@ -461,11 +461,7 @@ if os.getenv("ENVIRONMENT") == "production":
     INTERNAL_IPS = [
         '127.0.0.1'
     ]
-    
-    
-    DATABASES = values.DatabaseURLValue(
-        os.getenv("DATABASE_URL")
-    )
+
     
     ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS").split(',')
     CSRF_TRUSTED_ORIGINS = os.getenv("TRUSTED_ORIGINS").split(',')
